@@ -5,7 +5,7 @@
       "matchDepTypes": [
         "action"
       ],
-      "pinDigests": true
+      "pinDigests": false
     }
   ]
 }
