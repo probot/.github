@@ -1,29 +1,11 @@
 {
-  "labels": ["maintenance"],
-  "extends": [
-    "config:base",
-    ":disableDependencyDashboard"
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 5am on monday"]
-  },
-  "rangeStrategy": "replace",
-  "semanticCommitType": "build",
+  "extends": ["github>octokit/.github"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
-      "semanticCommitType": "chore"
-    },
-    {
-      "depTypeList": ["dependencies", "peerDependencies"],
-      "semanticCommitType": "fix"
-    },
-    {
-      "depTypeList": ["action"],
-      "semanticCommitType": "ci",
-      "semanticCommitScope": "action"
+      "matchDepTypes": [
+        "action"
+      ],
+      "pinDigests": true
     }
-  ],
-  "ignoreDeps": ["@pika/pack"]
+  ]
 }
