@@ -1,0 +1,11 @@
+{
+  "extends": ["github>octokit/.github"],
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "action"
+      ],
+      "pinDigests": false
+    }
+  ]
+}
